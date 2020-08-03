@@ -1,0 +1,64 @@
+* {
+    border: 1px solid olive;
+    
+}
+@font-face {
+    font-family: "Spooky Light";
+    src: url("../Assets/spooky_light\ font/Spooky Light.ttf");
+    }
+body {
+    background-color: black;
+    height: 100%;
+    margin: 0 auto;
+}
+video {
+    margin: 0 auto;
+    height: 100%; 
+}
+div{
+    display: flex;
+    justify-content: center;
+   
+}
+.title{
+    color: ghostwhite;
+    z-index: 2;
+    position: fixed;
+    text-align: center;
+    font-family: 'Spooky Light';
+    font-size: 100px;
+}
+#black{
+    font-size: 150px;
+}
+#heart{
+    color: red;
+    padding-top: 140px;
+}
+#mansion{
+    padding-top: 210px;
+}
+button {
+    z-index: 2;
+    font-size: 16px;
+    transform: translate(-50%, -50%);
+    outline: none;
+    background: rgba(115, 67, 167, 0.8);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    margin: 0 auto;
+    padding-left: 80px;
+  }
+  
+  button.fade:hover {
+    opacity: 0.8;
+  }
+  
+  .fade {
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
