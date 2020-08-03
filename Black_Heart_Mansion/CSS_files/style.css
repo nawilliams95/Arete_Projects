@@ -1,7 +1,7 @@
-* {
+/* * {
     border: 1px solid olive;
     
-}
+} */
 @font-face {
     font-family: "Spooky Light";
     src: url("../Assets/spooky_light\ font/Spooky Light.ttf");
@@ -39,28 +39,18 @@ div{
     padding-top: 210px;
 }
 
-/*==--->>Mute button styles and invisability animation/functionality<<---===*/
+/*==--->>Mute button styles<<---===*/
 button {
     display: flex;
+    justify-content: center;
     z-index: 2;
-    font-size: 16px;
     transform: translate(-50%, -50%);
-    outline: none;
     background: rgba(115, 67, 167, 0.8);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    opacity: 0.8;
+    opacity: 0.6;
     cursor: pointer;
-    transition: all 0.4s ease-out;
     margin: 0 auto;
+    border: none;
+    border-radius: 50px;
   }
-  
-  button.fade:hover {
-    opacity: 0.8;
-  }
-  
-  .fade {
-    opacity: 0.2;
-    top: 0;
-    left: 0;
-    transform: translate(0, 0);
-  }
+
+
