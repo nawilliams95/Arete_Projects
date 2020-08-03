@@ -38,7 +38,10 @@ div{
 #mansion{
     padding-top: 210px;
 }
+
+/*==--->>Mute button styles and invisability animation/functionality<<---===*/
 button {
+    display: flex;
     z-index: 2;
     font-size: 16px;
     transform: translate(-50%, -50%);
@@ -49,7 +52,6 @@ button {
     cursor: pointer;
     transition: all 0.4s ease-out;
     margin: 0 auto;
-    padding-left: 80px;
   }
   
   button.fade:hover {
