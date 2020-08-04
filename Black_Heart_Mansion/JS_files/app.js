@@ -20,6 +20,5 @@ $(() => {
     $('#mute').on('click', (event) => {
         $('#audio').get(0).pause();
     });
-
 });
 
