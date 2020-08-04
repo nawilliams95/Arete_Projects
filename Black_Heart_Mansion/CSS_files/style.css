@@ -27,6 +27,8 @@ div{
     text-align: center;
     font-family: 'Spooky Light';
     font-size: 100px;
+    background-color: transparent;
+    border: none;
 }
 #black{
     font-size: 150px;
@@ -34,16 +36,41 @@ div{
 #heart{
     color: red;
     padding-top: 140px;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;    
 }
 #mansion{
     padding-top: 210px;
 }
+#start_game{
+    z-index: 2;
+    box-shadow: 0px 0px 0px 2px #c21b37;
+	background-color:transparent;
+	border-radius:19px;
+	border:7px solid #f08a30;
+	display:inline-block;
+	cursor:pointer;
+	color:#c2a478;
+	font-family:Verdana;
+	font-size:26px;
+	font-style:italic;
+	padding:16px 49px;
+	text-decoration:none;
+    text-shadow:0px 0px 35px #c9d9e0;
+    margin-top: 600px;
+}
+#start_game:hover {
+	background-color:transparent;
+}
+#start_game:active {
+	position:relative;
+	top:1px;
+}
 
 /*==--->>Mute button styles<<---===*/
-button {
-    display: flex;
-    justify-content: center;
-    z-index: 2;
+#unmute {
     transform: translate(-50%, -50%);
     background: rgba(115, 67, 167, 0.8);
     opacity: 0.6;
@@ -51,6 +78,27 @@ button {
     margin: 0 auto;
     border: none;
     border-radius: 50px;
+    margin-top: 800px;
+    margin-left: 65px;
   }
+#mute {
+    transform: translate(-50%, -50%);
+    background: rgba(115, 67, 167, 0.8);
+    opacity: 0.6;
+    cursor: pointer;
+    margin: 0 auto;
+    border: none;
+    border-radius: 50px; 
+}
 
 
+/*==--->>Make Heart text glow<<---===*/
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+  
