@@ -53,27 +53,22 @@
 
 path:hover{
     fill: aqua;
-  }
-#patch1 {
+}
+.Start {
+    fill: blue;
+}
+.twoPoints {
     fill: orange;
 }
-#patch2 {
+.onePoint {
     fill: purple;
-}#patch3 {
+}
+.threePoints {
     fill: yellow;
-}#patch4 {
-    fill: red;
-}#patch5 {
-    fill: green;
-}#patch6 {
-    fill: orange;
-}#patch7 {
-    fill: purple;
-}#patch8 {
-    fill: yellow;
-}#patch9 {
+}
+.pointDeduction {
     fill: red;
 }
-#patch10 {
+.challenge {
     fill: green;
 }
