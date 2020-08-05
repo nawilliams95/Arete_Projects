@@ -1,3 +1,15 @@
+
+/* body {
+    background-image: url('../Assets/halloween-2914125_1920.jpg');
+    background-repeat: no-repeat;
+
+} */
+
+
+
+/*===================================*/
+/*==--->>How to-Pop Up style<<---===*/
+/*==================================*/
 #modal {
 	background-color: rgba(0, 0, 0, 0.4);
 	position: fixed;
@@ -27,11 +39,41 @@
 }
 .modal-buttons{
 	padding: 14px 18px;
-	background-color: #677996;
+	background-color: #d4d649;
 	border: none;
 	outline: none;
 	border-radius: 3px;
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
 	cursor: pointer;
+}
+/*===================================*/
+/*==----->>Board Styles<<-----===*/
+/*==================================*/
+
+path:hover{
+    fill: aqua;
+  }
+#patch1 {
+    fill: orange;
+}
+#patch2 {
+    fill: purple;
+}#patch3 {
+    fill: yellow;
+}#patch4 {
+    fill: red;
+}#patch5 {
+    fill: green;
+}#patch6 {
+    fill: orange;
+}#patch7 {
+    fill: purple;
+}#patch8 {
+    fill: yellow;
+}#patch9 {
+    fill: red;
+}
+#patch10 {
+    fill: green;
 }
