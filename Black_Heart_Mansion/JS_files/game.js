@@ -7,16 +7,17 @@ $(() => {
     //================================================
 
     const $openBtn = $('#openModal');
-    const $modal = $('#modal');
+    const $modalHowTo = $('.How_To');
     const $closeBtn = $('#close');
-
+    const $setUpModal = $('.player_setup')
 
     const openModal = () => {
-        $modal.css('display', 'block');
+        $modalHowTo.css('display', 'block');
     }
 
     const closeModal = () => {
-        $modal.css('display', 'none');
+        $modalHowTo.css('display', 'none')
+        $setUpModal.css('display', 'block');
     }
 
     $openBtn.on('click', openModal);
@@ -32,5 +33,5 @@ $(() => {
     // =================Rolling Dice=================
     //================================================
 
-    
+
 });

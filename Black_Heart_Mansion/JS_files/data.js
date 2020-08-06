@@ -25,11 +25,8 @@ $(() => {
 
         }
     }
-
     const rollDice = (event) => {
         let result = Math.floor(Math.random() * 6) + 1;
-        // const displayResult = $('<h2>').text(`${result}`).appendTo(resultBox);
-        // displayResult;
         dieRollResult.push(result);
         event.preventDefault();
         $(event.currentTarget).trigger('reset');
