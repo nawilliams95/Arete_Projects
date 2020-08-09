@@ -1,5 +1,4 @@
 console.log($)
-
 $(() => {
 
     //================================================
@@ -10,6 +9,7 @@ $(() => {
     const $modalHowTo = $('.How_To');
     const $closeBtn = $('#close');
     const $setUpModal = $('.player_setup')
+    const $doneBtn = $('#done');
 
     const openModal = () => {
         $modalHowTo.css('display', 'block');
@@ -20,8 +20,14 @@ $(() => {
         $setUpModal.css('display', 'block');
     }
 
+    const doneSetup = () => {
+        $setUpModal.css('display', 'none');
+        
+    };
+
     $openBtn.on('click', openModal);
     $closeBtn.on('click', closeModal);
+    $doneBtn.on('click', doneSetup);
 
     setTimeout(openModal, 3000);
 
