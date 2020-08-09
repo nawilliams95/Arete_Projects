@@ -22,7 +22,8 @@ $(() => {
 
     const doneSetup = () => {
         $setUpModal.css('display', 'none');
-        
+        moveAvatarStart();
+        startGame();
     };
 
     $openBtn.on('click', openModal);
@@ -35,9 +36,32 @@ $(() => {
     //     console.log($(event.currentTarget))
     // });
 
-    //================================================
-    // =================Rolling Dice=================
-    //================================================
+
+    // //================================================
+    // // =================turn function=================
+    // //================================================
+
+    // function nextPlayer(currentPlayer) {
+    //     let nextPlayer = currentPlayer + 1;
+
+    //     if (nextPlayer == game.players.length) {
+    //         return 0;
+    //     }
+
+    //     return nextPlayer;
+    // };
+    
+
+    const startGame = () => {
+        if (currentPlayer.turn <= totalNumOfTurns) {
+            alert(`its ${currentPlayer.name}'s turn!`);
+
+        }
+
+    };
+
+
+
 
 
 });
