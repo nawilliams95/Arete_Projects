@@ -51,11 +51,12 @@ $(".green_ghost").on('mousedown').animateSprite('play', 'walkLight').draggable()
 
 
 class Player {
-    constructor(name, score, character, turn) {
+    constructor(name, score, character, turn, id) {
         this.name = name;
         this.score = score;
         this.character = character;
         this.turn = turn;
+        this.id = id
     }
 };
 
@@ -65,8 +66,8 @@ let CurrentNumOfturns = null;
 let currentPlayer = null;
 // assigns players names, score, avatars and pushes that info to player arry and dom. 
 $('form').on('submit', (event) => {
-    const playerOne = new Player($('#plyr1').val(), 0, ghost, 0);
-    const playerTwo = new Player($('#plyr2').val(), 0, greenGhost, 0);
+    const playerOne = new Player($('#plyr1').val(), 0, ghost, 0, 'player1');
+    const playerTwo = new Player($('#plyr2').val(), 0, greenGhost, 0, 'player2');
     $('#player1').text(playerOne.name);
     $('#player1_score').text(playerOne.score);
     players.push(playerOne);
@@ -163,6 +164,8 @@ const addOnePiont = () => {
 oneSpace.on('click', (event) => {
     
     addOnePiont();
+    document.getElementById(currentPlayer.id + "_score").innerHTML = currentPlayer.score;
+    currentPlayer.turn += 1;
     let playerPos = $(event.currentTarget).offset();
     currentPlayer.character.css('top', `${playerPos.top}` + 'px');
     currentPlayer.character.css('left', `${playerPos.left}` + 'px');
@@ -175,6 +178,8 @@ const addTwoPionts = () => {
 twoSpace.on('click', (event) => {
     
     addTwoPionts();
+    document.getElementById(currentPlayer.id + "_score").innerHTML = currentPlayer.score;
+    currentPlayer.turn += 1;
     let playerPos = $(event.currentTarget).offset();
     currentPlayer.character.css('top', `${playerPos.top}` + 'px');
     currentPlayer.character.css('left', `${playerPos.left}` + 'px');
@@ -182,11 +187,14 @@ twoSpace.on('click', (event) => {
 
 const addThreePionts = () => {
     currentPlayer.score += 3;
+
 };
 
 threeSpace.on('click', (event) => {
     
     addThreePionts();
+    document.getElementById(currentPlayer.id + "_score").innerHTML = currentPlayer.score;
+    currentPlayer.turn += 1;
     let playerPos = $(event.currentTarget).offset();
     currentPlayer.character.css('top', `${playerPos.top}` + 'px');
     currentPlayer.character.css('left', `${playerPos.left}` + 'px');
