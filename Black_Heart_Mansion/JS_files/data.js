@@ -25,9 +25,9 @@ $(".ghost").animateSprite({
     // }
 });
 
-const ghost = $('.ghost');
+const ghost = $('.ghost').draggable();
 
-$(".ghost").on('mousedown').animateSprite('play', 'walkLeft').draggable();
+// $(".ghost").on('mousedown').animateSprite('play', 'walkLeft');
 
 //=============>>>>Green Avatar<<<<<============
 
@@ -44,9 +44,11 @@ $(".green_ghost").animateSprite({
     // }
 });
 
-const greenGhost = $('.green_ghost');
+const greenGhost = $('.green_ghost').draggable();
 
-$(".green_ghost").on('mousedown').animateSprite('play', 'walkLight').draggable();
+// $(".green_ghost").on('mousedown').animateSprite('play', 'walkLight');
+
+
 
 
 // $greenGhost.css('display', 'block');
@@ -100,7 +102,7 @@ const die = $('.dice');
 let dieRollResult = []
 
 const render = (arry) => {
-    const resultBox = $('ul').empty();
+    const resultBox = $('.roll_result').empty();
     for (let item of arry) {
         const dieNum = $('<li>')
         dieNum.text(item).addClass('result').appendTo(resultBox);
@@ -166,19 +168,48 @@ const movePlayer = () => {
 
 const totalBoardPaths = boradPath.length + 1;
 
+
+
 // shows players where to drag thier avatar/click
 const showNextMove = () => {
     if(players[currentPlayer].position += dieRollResult[0] <= totalBoardPaths) {
         let newPlayerPos = players[currentPlayer].position += dieRollResult[0] - 1;
         let nextPlayerMove = boradPath[newPlayerPos];
         players[currentPlayer].position = newPlayerPos;
-        $('#' + nextPlayerMove).css('fill', 'aqua');
+        $('#' + nextPlayerMove).addClass('vibrate');
+        stopVib($('#' + nextPlayerMove));
+
     } else {
         let newPlayerPos = players[currentPlayer].position += dieRollResult[0] - totalBoardPaths - 1;
         let nextPlayerMove = boradPath[newPlayerPos];
         players[currentPlayer].position = newPlayerPos;
-        $('#' + nextPlayerMove).css('fill', 'aqua');
+         $('#' + nextPlayerMove).addClass('vibrate');
+        
     }
     
     
 };
+
+const stopVib = (patch) => {
+    setTimeout(() => {
+        patch.removeClass('vibrate');
+    } ,8000);
+    
+};
+
+let trunAlert = [];
+const renderTurn = (arry) => {
+    const trunAlert = $('.turn_box').empty();
+    for (let item of arry) {
+        const turn = $('<li>')
+        turn.text(item).addClass('turn_alert').appendTo(trunAlert);
+
+    }
+}
+ const showTurn =(event) => {
+    let alert = ` Its ${players[currentPlayer].id}: ${players[currentPlayer].name}'s turn!`;
+    trunAlert.push(alert);
+    renderTurn(trunAlert);
+    trunAlert.pop();
+ };
+ 

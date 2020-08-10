@@ -19,7 +19,8 @@
 
 <body>
     <button class="modal-buttons" id="openModal">?</button>
-    <ul></ul>
+   <ul class="turn_box"></ul> 
+   <ul class="roll_result"></ul>
     <div class="How_To" id="modal">
         <div id="modal-textbox">
             <div id="modal-footer">
@@ -31,13 +32,15 @@
             <p>Players will pick thier player avatar/piece. players will then agree on how many turns they would like
                 the game to last.</p>
             <p>Players take turns rolling the dice to move clockwise throughout the game board to earn points. Each
-                board piece is assigned a certain number of points, but be careful some spaces subtract points, creat
+                board piece is assigned a certain number of points, but be careful some spaces subtract points, create
                 obsticals like missing a turn or present challenges ! </p>
             <h3>How To roll the Dice:</h3>
             <p>Players pick up the die by clicking the die on the screen and holding down the left click while shaking
                 the mouse and then release to throw the die. Just like you were shaking them in real life!</p>
+            <h3>Moving Avatar/Taking Turn:</h3> 
+            <p>PLayers may movie thier avatar by clicking and draginging it to thier desired location. When a player rolls the next space forthem to move to will shake. Move your avatart to the space and then click the space to complate turn.</p>
             <h3>Challenge Spaces:</h3>
-            <p>When players land on a challenge space they will randomly placed in a mni game where they will eigther
+            <p>When players land on a challenge space they will randomly placed in a mini game oe lose a turn. In mini games they will either
                 play a game of chance against the spirits that like to hang around the Mansion or against one of thier
                 opponents. At the begining of each chanllenge a player will player will place a bet in point value on
                 weather or not they will win. If the player wins they will gain that much in points. if they lose well
@@ -56,9 +59,9 @@
 
                 <h1>Setup:</h1>
                 <form>
-                    <label for="plyr1">Player one:</label>
+                    <label for="plyr1">Player one (White Ghost):</label>
                     <input type="text" id="plyr1"><br><br>
-                    <label for="plyr2">Player two:</label>
+                    <label for="plyr2">Player two (Green Ghost):</label>
                     <input type="text" id="plyr2"><br><br>
                     <label for="turn_number">Select the number of turns</label>
                     <input type="number" id="total_turns" min="10" max="25"><br><br>
@@ -66,11 +69,12 @@
                 </form>
             </div>
         </div>
+        
         <div>
             <img class='dice' src="../Assets/icons8-dice-48.png" alt="dice">
         </div>
-        <div class="ghost" id="ghost_advatar"></div>
-        <div class="green_ghost" id="green_ghost_advatar"></div>
+        <div class="ghost" id="ghost_advatar" draggable="true"></div>
+        <div class="green_ghost" id="green_ghost_advatar" draggable="true"></div>
         <div class="game_board">
             <!--=====================================================================================-->
             <!--SVG gamebored created + generated in Adobe illistrator. Each 'path' is a step/piece -->
