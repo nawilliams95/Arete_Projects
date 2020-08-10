@@ -23,7 +23,7 @@ $(() => {
     const doneSetup = () => {
         $setUpModal.css('display', 'none');
         moveAvatarStart();
-        startGame();
+        // startGame();
     };
 
     $openBtn.on('click', openModal);
@@ -38,27 +38,18 @@ $(() => {
 
 
     // //================================================
-    // // =================turn function=================
+    // // =================Start the game loop===========
     // //================================================
 
-    // function nextPlayer(currentPlayer) {
-    //     let nextPlayer = currentPlayer + 1;
+    // const startGame = () => {
+    //     if (currentPlayer.turn <= totalNumOfTurns) {
+    //         alert(`its ${currentPlayer.id}: ${currentPlayer.name}'s turn!`);
 
-    //     if (nextPlayer == game.players.length) {
-    //         return 0;
+
+
     //     }
 
-    //     return nextPlayer;
     // };
-    
-
-    const startGame = () => {
-        if (currentPlayer.turn <= totalNumOfTurns) {
-            alert(`its ${currentPlayer.name}'s turn!`);
-
-        }
-
-    };
 
 
 
