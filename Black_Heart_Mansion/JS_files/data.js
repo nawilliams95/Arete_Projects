@@ -148,12 +148,13 @@ const moveAvatarStart = () => {
 
 const nextPlayer = () => {
     let nextPlayer = currentPlayer + 1;
+    if (nextPlayer === players.length - 1) {
+       currentPlayer = nextPlayer;
+    } else {
+        nextPlayer = 0;
+        currentPlayer = nextPlayer;
+    };
 
-    if (nextPlayer === players.length) {
-        return 0;
-    }
-
-    return nextPlayer;
 };
 
 const movePlayer = () => {
@@ -161,73 +162,6 @@ const movePlayer = () => {
     players[currentPlayer].character.css('top', `${playerPos.top}` + 'px');
     players[currentPlayer].character.css('left', `${playerPos.left}` + 'px');
 };
-
-//================================================
-// ========Game point/space system set up=========
-//================================================
-const oneSpace = $('.onePoint');
-const twoSpace = $('.twoPoints');
-const threeSpace = $('.threePoints');
-const penaltySpace = $('.pointDeduction');
-const challengeSpace = $('.challenge');
-
-const addOnePiont = () => {
-    players[currentPlayer].score += 1;
-};
-
-oneSpace.on('click', (event) => {
-
-    addOnePiont();
-    document.getElementById(players[currentPlayer].id + "_score").innerHTML = players[currentPlayer].score;
-    players[currentPlayer].turn += 1;
-    // let playerPos = $(event.currentTarget).offset();
-    // players[currentPlayer].character.css('top', `${playerPos.top}` + 'px');
-    // players[currentPlayer].character.css('left', `${playerPos.left}` + 'px');
-    movePlayer();
-});
-
-const addTwoPionts = () => {
-    players[currentPlayer].score += 2;
-};
-
-twoSpace.on('click', (event) => {
-
-    addTwoPionts();
-    document.getElementById(players[currentPlayer].id + "_score").innerHTML = players[currentPlayer].score;
-    players[currentPlayer].turn += 1;
-    // let playerPos = $(event.currentTarget).offset();
-    // players[currentPlayer].character.css('top', `${playerPos.top}` + 'px');
-    // players[currentPlayer].character.css('left', `${playerPos.left}` + 'px');
-    movePlayer();
-});
-
-const addThreePionts = () => {
-    players[currentPlayer].score += 3;
-
-};
-
-threeSpace.on('click', (event) => {
-
-    addThreePionts();
-    document.getElementById(players[currentPlayer].id + "_score").innerHTML = players[currentPlayer].score;
-    players[currentPlayer].turn += 1;
-    // let playerPos = $(event.currentTarget).offset();
-    // players[currentPlayer].character.css('top', `${playerPos.top}` + 'px');
-    // players[currentPlayer].character.css('left', `${playerPos.left}` + 'px');
-    movePlayer();
-});
-
-const randomPointDeduction = () => {
-    players[currentPlayer].score -= Math.floor(Math.random() * 3) + 1;
-};
-
-penaltySpace.on('click', (event) => {
-    randomPointDeduction();
-    document.getElementById(players[currentPlayer].id + "_score").innerHTML = players[currentPlayer].score;
-    players[currentPlayer].turn += 1;
-    movePlayer();
-})
-
 
 
 const totalBoardPaths = boradPath.length + 1;
@@ -245,8 +179,6 @@ const showNextMove = () => {
         players[currentPlayer].position = newPlayerPos;
         $('#' + nextPlayerMove).css('fill', 'aqua');
     }
-    
-    
     
     
 };
