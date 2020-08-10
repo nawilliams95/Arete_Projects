@@ -119,8 +119,18 @@ penaltySpace.on('click', (event) => {
         if (players[currentPlayer].turn <= totalNumOfTurns) {
             alert(`its ${players[currentPlayer].id}: ${players[currentPlayer].name}'s turn!`);
 
+        } else {
+            if(players[0].score > players[1].score) {
+             $('body').prepend(`<h1> GAME OVER ${players[0].name} WINS!!</h1>`)   
+            
+            } else if (players[0].score < players[1].score) {
+                $('body').prepend(`<h1> GAME OVER ${players[1].name} WINS!!</h1>`)
+            
+           } else {
+            $('body').prepend(`<h1> GAME OVER ${players[0].name} and ${players[1].name} ARE TIED---Play again?!!</h1>`)
+           }
         }
-
+            
     };
 
 
