@@ -1,6 +1,6 @@
 
 # Black Heart Mantion
-![Game_Image(/BH_open.png)]
+![Image of Game Home](https://i.ibb.co/rFV8GFm/BH-open.png)
 
 #### About Game
 
@@ -11,7 +11,7 @@ The game flow is designed to play just as you would in real life. I felt like mo
 
 
 #### How To Play
-![Game_Image(/BH_start.png)]
+![Game_Image](https://i.ibb.co/m5WML3G/GH-start.png)
 - Set Up:
     Players will pick thier player avatar/piece. players will then agree on how many turns they would like the game to last. Players take turns rolling the dice to move clockwise throughout the game board to earn points. Each board piece is assigned a certain number of points, but be careful some spaces subtract points, create obsticals like missing a turn or present challenges ! 
 
@@ -34,8 +34,7 @@ The game flow is designed to play just as you would in real life. I felt like mo
 - This game will continue to be updated to add more mini games and obsticals throught out the board.
 
 ## Live Demo
-
-
+https://black-heart.nawilliams95.vercel.app/
 ### Credits 
 
 Game advatars and backgrouds were provided curtiosy of opengameart.org
