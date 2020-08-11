@@ -1,10 +1,10 @@
 
-# Black Heart Mantion
+# Black Heart Mansion
 ![Image of Game Home](https://i.ibb.co/rFV8GFm/BH-open.png)
 
 #### About Game
 
-Black Heart Mantion is a halloween themed web based board game where players compete to earn the most points while trying to aviod obsticals., and deveiously stealing points from one another. 
+Black Heart Mansion is a halloween themed web based board game where players compete to earn the most points while trying to aviod obsticals., and deveiously stealing points from one another. 
 
 The game flow is designed to play just as you would in real life. I felt like most online boardgames take the most fun part of playing a boardgame (player interaction) by makeing everything automated. In black Heart Mantions players pick up and roll dice, pick up and freely move character pieces around the board/ to thier spaces and play out thier own turn!
 
