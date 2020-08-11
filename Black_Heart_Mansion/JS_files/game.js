@@ -110,6 +110,7 @@ $(() => {
         randomPointDeduction();
         document.getElementById(players[currentPlayer].id + "_score").innerHTML = players[currentPlayer].score;
         players[currentPlayer].turn += 1;
+        alert(`${players[currentPlayer].name} Lost Points!`)
         // movePlayer();
         nextPlayer();
         playTurn();
